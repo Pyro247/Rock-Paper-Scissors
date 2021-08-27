@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css files/first_page_css.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <!-- PopUp -->
+    <div class="popup-game-mode" id="popupID">
+        <h2>Play options</h2>
+        <button onclick="location.href='/Game_2_Players.html'">2 Players</button>
+        <button onclick="location.href='Game_Computer.html'">vs. Computer</button>
+        <button class="cancenBtn" onclick="blurr(), showPlayerOptions()">X</button>
+    </div>
+
+    <!-- Main content First Page -->
+    <div class="content" id="contentID">
+        <h1>Rock Paper Scissors : The Game</h1>
+        <button onclick="blurr(), showPlayerOptions()">Play</button>
+        <h5>Justine Dave M. DelosReyes ©</h5>
+    </div>
+
+    <!-- Script src -->
+    <script src="/javascript files/first_page_js.js"></script>
+    <script src="/javascript files/app.js"></script>
+
+</body>
+</html>
