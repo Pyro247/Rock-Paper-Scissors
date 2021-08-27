@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css files/player_option_computer.css">
+    <title>Rock Paper Scissors : Computer</title>
+</head>
+<body>
+    <!-- Pop up for 2 players -->
+    <div class="for-2-players-popup" id="popup-computerID">
+        <div class="popup-for-2-players-input">
+            <h3>Player name</h3>
+            <input type="text" id="player1inputID">
+        </div>
+        <p id="requiredID"></p>
+        <button class="gameBtn-popup-2-players" onclick="blurr(), getPlayernameComputer()">Game</button>
+    </div>
+ <!-- Main content -->
+ <section id="main-section-computer" class="section-class">
+
+    <!-- Title -->
+    <header>
+        <h2>Rock Paper Scissors</h2>
+    </header>
+
+    <!-- For the Images -->
+    <div class="parent-img-container" id="imagesID">
+        <div class="img-container">
+            <img src="images/rock.png" alt="" id="rock-id" onclick="rock()">
+            <label for="rock-id">Rock</label>
+        </div>
+
+        <div class="img-container">
+            <img src="images/trifold.png" alt="" id="paper-id" onclick="paper()">
+            <label for="paper-id">Paper</label>
+        </div>
+    
+        <div class="img-container">
+            <img src="images/scissors.png" alt="" id="scissors-id" onclick="scissorFunction()">
+            <label for="scissors-id">Scissors</label>
+        </div>
+    </div>
+
+    <!-- Status Board -->
+    <div class="status-board">
+        <div class="players-status-choice">
+            <h3 id="player1nameAboveChoice">Player 1</h3>
+            <span id="p1-choice"></span>
+        </div>
+
+            <span id="choice-operator">vs</span>
+
+        <div class="players-status-choice">
+            <h3  id="player2nameAboveChoice">Computer</h3>
+            <span id="p2-choice"></span>
+        </div>
+    </div>
+
+    <!-- Score Board -->
+    <div class="score-board">
+        <div class="scoreboard-of-2-players">
+            <h2 id="player-1-score-el"></h2>
+            <h2 id="player-2-score-el">Computer:</h2>
+        </div>
+        <h3 id="score-status">x</h3>
+    </div>
+        <button onclick="newGame()" id="buttonid" class="buttonMain">Check</button>
+    </section>
+    <div class="backButton">
+        <a href="index.html"><img src="/images/previous.png" alt=""></a>
+    </div>
+
+
+        <script type="text/javascript">
+            function blurr(){
+                let popUpdiv = document.getElementById('popup-computerID')
+                popUpdiv.classList.toggle('active')
+                let section = document.getElementById('main-section-computer')
+                section.classList.toggle('active')
+            }
+        </script>
+
+    <script src="/javascript files/app_computer.js"></script>
+    
+</body>
+</html>

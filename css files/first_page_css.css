@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background-color: #1e1e1e;
+   overflow: hidden;
+   
+}
+/* PopUp play options */
+.popup-game-mode{
+    padding: 25px;
+    text-align: center;
+    border-radius: 30px;
+    border: 3px solid rgba(10, 174, 80, 100);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 350px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #1e1e1e;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.popup-game-mode.active{
+    visibility: visible;
+    opacity: 1;
+    top: 40%;
+    z-index: 10;
+}
+.popup-game-mode h2{
+    color: lightgreen;
+    margin: 20px;
+}
+
+.popup-game-mode button{
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #49c;
+    background: #1e1e1e;
+    transition: all 300ms ease;
+}
+.popup-game-mode .cancenBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 7px 12px;
+    color: white;
+}
+
+.popup-game-mode .cancenBtn:hover{
+    color: crimson;
+    box-shadow: 1px 1px 15px rgba(255, 0, 0, 100)
+}
+
+
+
+
+
+/* PopUp play options 2 players */
+
+.popup-2-players.active{
+    visibility: visible;
+    opacity: 1;
+    top: 40%;
+}
+
+.popup-2-players{
+    padding: 16px;
+    position: fixed;
+    width: 350px;
+    height: 250px;
+    border: 3px solid rgba(10, 174, 80, 100);
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: 11;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #1e1e1e;
+    transition: all 300ms ease;
+    visibility: hidden; 
+    opacity: 0;
+}
+
+.popup-2-players .cancenBtn-popup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 7px 12px;
+    color: white;
+    margin:10px 15px;
+    background: #1e1e1e;
+    cursor: pointer;
+}
+
+.popup-2-players .cancenBtn-popup:hover{
+    color: crimson;
+    box-shadow: 1px 1px 15px rgba(255, 0, 0, 100)
+}
+
+
+.popup-2-players .popup-player1{
+    display: flex;
+    margin: 20px auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.popup-2-players .popup-player1 input{
+    background-color: #1e1e1e;
+    color: lightgreen;
+    height: 33px;
+    width: 70%;
+    margin: auto;
+    border: none;
+    padding: 0 10px;
+    outline-color: lightgreen;
+    border: 3px solid #302b63;
+}
+
+.popup-2-players .popup-player1 h3{
+    color: #09c;
+}
+
+.gameBtn{
+    display:block;
+    margin: 10px auto;
+    padding: 5px 25px;
+    color: #09c;
+    background: #1e1e1e;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+.gameBtn:hover{
+    color: lightgreen;
+    box-shadow: 1px 1px 15px rgba(74, 174, 0, 100)
+}
+
+
+
+
+/* Content */
+.content{
+    height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.content.active{
+    z-index: 0;
+    filter: blur(25px);
+    pointer-events: none;
+}
+.content h1{
+    color: lightgreen;
+    text-align: center;
+}
+.content button{
+    margin: 20px auto;
+    padding: 20px 40px;
+    width: 200px;
+    color: #49c;
+    background: #1e1e1e;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 24px;
+    transition: all 300ms ease;
+    border-radius: 20px;
+}
+
+.content h5{
+    position: fixed;
+    color: lightblue;
+    top: 80%;
+    
+}
+
+.content button:hover,
+.popup-game-mode button:hover{
+    color: lightgreen;
+    box-shadow: 1px 1px 15px rgba(74, 174, 0, 100)
+}
+
+
+
+@media (max-width: 370px) {
+    .content h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .content button{
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+}
+

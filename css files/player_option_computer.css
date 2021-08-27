@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.for-2-players-popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 150px;
+    border: 3px solid lightgreen;
+    border-radius: 10px;
+    animation: popupAnimate 500ms linear;
+    z-index: 101;
+    
+}
+
+@keyframes popupAnimate {
+    0%{
+        top: 25%
+    }
+}
+
+.for-2-players-popup.active{
+    visibility: hidden;
+    opacity: 0;
+}
+.popup-for-2-players-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+.popup-for-2-players-input input{
+    padding: 2px 5px;
+    margin-top: 5px;
+    background: #1e1e1e;
+    outline-color: #09c;
+    border: 2px solid #99c;
+    border-radius: 7px;
+    color: lightblue;
+    width: 80%;
+}
+
+.popup-for-2-players-input h3{
+    color: lightgreen;
+}
+.gameBtn-popup-2-players{
+    display: block;
+    margin: 15px auto;
+    padding: 5px;
+    cursor: pointer;
+    background: #1e1e1e;
+    border-radius: 10px;
+    color: lightblue;
+    transition: all 300ms ease;
+    font-size: 16px;
+}
+
+.gameBtn-popup-2-players:hover{
+  color: lightgreen;
+  box-shadow: 1px 5px 15px #99ee99;
+}
+
+
+/* SECTION */
+.section-class{
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.section-class.active{
+    filter: blur(0);
+    pointer-events: all;
+}
+
+
+/* Not popUp */
+header{
+    padding: 20px;
+    background: white;
+}
+header h2{
+    color: #06c;
+    text-align: center;
+}
+
+.parent-img-container{
+    display: flex;
+    transition: all 300ms ease;
+}
+
+.parent-img-container.active{
+    pointer-events: none;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+.img-container label{
+    margin-top: 10px;
+    color: #09c;
+    font-size: 1.1rem;
+}
+
+.img-container img{
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 20px;
+    transition: all 800ms;
+}
+
+.status-board{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.players-status-choice h3{
+    color: white;
+}
+
+.status-board .players-status-choice span,
+.status-board span{
+    color: white;
+}
+
+.img-container img:hover{
+    transform: rotate(360deg);
+    border: 3px solid rgb(23, 212, 117);
+}
+.scoreboard-of-2-players{
+    display: flex;
+    border: 1px solid aquamarine;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.scoreboard-of-2-players h2{ 
+    color: white;
+    
+}
+
+.score-board{
+    margin: 20px 
+  }
+  
+  .score-board h3{
+      text-align: center;
+      color: lightgreen;
+      font-size: 26px;
+  }
+  
+  
+  .buttonMain{
+      transition: 300ms;
+      visibility: hidden;
+      opacity: 0;
+  }
+
+  .buttonMain.active{
+      visibility: visible;
+      opacity: 1;
+  }
+  .buttonMain:hover{
+      color: lightgreen;
+      box-shadow: 1px 5px 10px rgb(23, 212, 117);
+  }
+  
+  button{
+      display: block;
+      margin: 20px auto;
+      padding: 10px 80px;
+      font-size: 20px;
+      background: #1e1e1e;
+      color: #09c;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 1px 4px 15px rgba(0, 074, 123, 50%);
+  }
+  
+  .backButton a{
+    text-decoration: none;
+}
+
+.backButton img{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50x;
+} 
+
+@media (max-width: 370px) {
+    .section-class{
+        overflow: hidden;
+    }
+    .img-container img{
+        width: 100px;
+        height: 100px;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .scoreboard-of-2-players{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .players-status-choice h3{
+    font-size: 1rem;
+    }
+    #buttonid{
+        padding: 10px 25px;
+        font-size: 1.1rem;
+    }
+}

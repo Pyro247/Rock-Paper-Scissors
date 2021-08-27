@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css files/player_option_2.css">
+    <title>Rock Paper Scissors : 2 Players</title>
+</head>
+<body>
+    
+    <!-- Pop up for 2 players -->
+    <div class="for-2-players-popup" id="popup-2-playersID">
+            <div class="popup-for-2-players-input">
+                <h3>Player 1 name</h3>
+                <input type="text" required id="player1inputID">
+            </div>
+
+            <div class="popup-for-2-players-input">
+                <h3>Player 2 name</h3>
+                <input type="text" required id="player2inputID">
+            </div>
+            <p id="requiredID"></p>
+            <button class="gameBtn-popup-2-players" onclick="removePopupFor2Players(), getPlayersname()">Game</button>
+    </div>
+
+    <!-- Main content -->
+    <section id="main-section-players-2" class="section-class">
+
+        <!-- Title -->
+        <header>
+            <h2>Rock Paper Scissors</h2>
+        </header>
+
+        <!-- For the Images -->
+        <div class="parent-img-container" id="imagesID">
+            <div class="img-container">
+                <img src="images/rock.png" alt="" id="rock-id" onclick="rock()">
+                <label for="rock-id">Rock</label>
+            </div>
+    
+            <div class="img-container">
+                <img src="images/trifold.png" alt="" id="paper-id" onclick="paper()">
+                <label for="paper-id">Paper</label>
+            </div>
+        
+            <div class="img-container">
+                <img src="images/scissors.png" alt="" id="scissors-id" onclick="scissors()">
+                <label for="scissors-id">Scissors</label>
+            </div>
+        </div>
+
+        <!-- Status Board -->
+        <div class="status-board">
+            <div class="players-status-choice">
+                <h3 id="player1nameAboveChoice">Player 1</h3>
+                <span id="p1-choice"></span>
+            </div>
+
+                <span id="choice-operator">=</span>
+
+            <div class="players-status-choice">
+                <h3  id="player2nameAboveChoice">Player 2</h3>
+                <span id="p2-choice"></span>
+            </div>
+        </div>
+
+        <!-- Score Board -->
+        <div class="score-board">
+            <div class="scoreboard-of-2-players">
+                <h2 id="player-1-score-el">Player 1 Score:</h2>
+                <h2 id="player-2-score-el">Player 2 Score:</h2>
+            </div>
+            <h3 id="score-status">x</h3>
+        </div>
+            <button onclick="mainButton()" id="buttonid" class="buttonMain">Check</button>
+            
+        </section>
+        <div class="backButton">
+            <a href="index.html"><img src="/images/previous.png" alt=""></a>
+        </div>
+        
+    
+    <!-- Scirpts -->
+    <script type="text/javascript">
+        let player1input = document.getElementById('player1inputID')
+        let player2input = document.getElementById('player2inputID')
+        let requiredx = document.getElementById('requiredID')
+    
+            function removePopupFor2Players(){
+                if(player1input.value === ""){
+                    requiredx.textContent = "Enter Player 1 name"
+                }else if(player2input.value === ""){
+                    requiredx.textContent = "Enter Player 2 name"
+                }else{
+                    requiredx.textContent = ""
+                    var removePopup = document.getElementById('popup-2-playersID')
+                    var section = document.getElementById('main-section-players-2')
+                    section.classList.toggle('section-active')
+                    removePopup.classList.toggle('active')
+                }
+            }
+    </script>
+    <script src="/javascript files/app.js"></script>
+
+</body>
+</html>
